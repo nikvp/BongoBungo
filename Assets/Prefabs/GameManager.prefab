@@ -1,0 +1,94 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5667717502262224584
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5667717502262224596}
+  - component: {fileID: 5667717502262224587}
+  - component: {fileID: 5667717502262224586}
+  - component: {fileID: 5667717502262224585}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5667717502262224596
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5667717502262224584}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.64403844, y: 1.3159328, z: -2.684521}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5667717502262224587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5667717502262224584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58f3dd21b99f8d940a66bb6ba65d9bc8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  keys: 310000003200000033000000340000003500000036000000370000003800000039000000
+--- !u!114 &5667717502262224586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5667717502262224584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 232457ed55f35ca43a28c46d056adca6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anythingInput:
+    m_PersistentCalls:
+      m_Calls: []
+  drum1Input:
+    m_PersistentCalls:
+      m_Calls: []
+  drum2Input:
+    m_PersistentCalls:
+      m_Calls: []
+  drum3Input:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &5667717502262224585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5667717502262224584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84ed172ace2f4314ba1f1edc08b075e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioID:
+  - BBSnare
+  - BBDouble
+  - BBGuiro
+  - BBSnare
+  - BBDouble
+  - BBGuiro
+  - BBSnare
+  - BBDouble
+  - BBGuiro

@@ -5,6 +5,7 @@ using UnityEngine;
 public class DrumAudio : MonoBehaviour
 {
     DrumInputSystem dis;
+    public string[] audioID;
 
     // Start is called before the first frame update
     void Awake()
@@ -20,6 +21,7 @@ public class DrumAudio : MonoBehaviour
     }
 
     void PlayDrumAudio(DrumInput d) {
+        AudioFW.Play(audioID[(int)d]);
         print("Played " + d);
     }
 }

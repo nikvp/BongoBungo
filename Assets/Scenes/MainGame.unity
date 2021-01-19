@@ -272,6 +272,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1629984193 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5667717502262224584, guid: a70a2e4afb33b404b910497f26bb705b, type: 3}
+  m_PrefabInstance: {fileID: 5667717502636125604}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3304458871589319429
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -327,6 +332,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DrumTwo
       objectReference: {fileID: 0}
+    - target: {fileID: 3304458870808050333, guid: 6663c426b1a7e6e4cae4bd258cbee16c, type: 3}
+      propertyPath: gm
+      value: 
+      objectReference: {fileID: 1629984193}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6663c426b1a7e6e4cae4bd258cbee16c, type: 3}
 --- !u!1001 &5667717502636125604
@@ -384,7 +393,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5667717502262224587, guid: a70a2e4afb33b404b910497f26bb705b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: a70a2e4afb33b404b910497f26bb705b, type: 3}
 --- !u!1001 &6264105357011057720
 PrefabInstance:
@@ -437,6 +447,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6264105357206352787, guid: 27a0c71bedcd7544cab455e5df9347e0, type: 3}
+      propertyPath: gm
+      value: 
+      objectReference: {fileID: 1629984193}
     - target: {fileID: 6264105357206352798, guid: 27a0c71bedcd7544cab455e5df9347e0, type: 3}
       propertyPath: m_Name
       value: DrumThree
@@ -507,6 +521,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8703771164444320395, guid: 31f40aac99241964e841efd04044ea7f, type: 3}
+      propertyPath: gm
+      value: 
+      objectReference: {fileID: 1629984193}
     - target: {fileID: 8703771164444320432, guid: 31f40aac99241964e841efd04044ea7f, type: 3}
       propertyPath: m_Name
       value: DrumOne

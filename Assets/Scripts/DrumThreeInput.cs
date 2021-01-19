@@ -6,10 +6,11 @@ public class DrumThreeInput : MonoBehaviour
 {
     DrumInputSystem dis;
     public Collider coll;
+    public GameObject gm;
     List<RaycastHit> amountOfHits = new List<RaycastHit>();
 
     void Awake() {
-        dis = FindObjectOfType<DrumInputSystem>();
+        dis = gm.GetComponent<DrumInputSystem>();
         coll = GetComponent<Collider>();
     }
 
@@ -21,13 +22,13 @@ public class DrumThreeInput : MonoBehaviour
                 RaycastHit hit;
                 if (coll.Raycast(ray, out hit, 100f)) {
                     amountOfHits.Add(hit);
-                    print("HitD3");
+                    //print("HitD3");
                 }
             }
         }
 
         if (amountOfHits.Count > 0) {
-            print("D3 Hits: " + amountOfHits.Count);
+            //print("D3 Hits: " + amountOfHits.Count);
             float timer = 0.2f;
             timer -= Time.deltaTime;
             if (timer < 0) {

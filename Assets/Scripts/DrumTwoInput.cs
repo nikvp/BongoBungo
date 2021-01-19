@@ -5,11 +5,12 @@ using UnityEngine;
 public class DrumTwoInput : MonoBehaviour
 {
     DrumInputSystem dis;
+    public GameObject gm;
     public Collider coll;
     List<RaycastHit> amountOfHits = new List<RaycastHit>();
 
     void Awake() {
-        dis = FindObjectOfType<DrumInputSystem>();
+        dis = gm.GetComponent<DrumInputSystem>();
         coll = GetComponent<Collider>();
     }
 
@@ -21,13 +22,13 @@ public class DrumTwoInput : MonoBehaviour
                 RaycastHit hit;
                 if (coll.Raycast(ray, out hit, 100f)) {
                     amountOfHits.Add(hit);
-                    print("HitD2");
+                    //print("HitD2");
                 }
             }
         }
 
         if (amountOfHits.Count > 0) {
-            print("D2 Hits: " + amountOfHits.Count);
+            //print("D2 Hits: " + amountOfHits.Count);
             float timer = 0.2f;
             timer -= Time.deltaTime;
             if (timer < 0) {

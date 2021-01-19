@@ -525,6 +525,10 @@ PrefabInstance:
       propertyPath: gm
       value: 
       objectReference: {fileID: 1629984193}
+    - target: {fileID: 8703771164444320395, guid: 31f40aac99241964e841efd04044ea7f, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8703771164444320432, guid: 31f40aac99241964e841efd04044ea7f, type: 3}
       propertyPath: m_Name
       value: DrumOne
@@ -575,3 +579,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 31f40aac99241964e841efd04044ea7f, type: 3}
+--- !u!1 &8703771162886865964 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8703771164444320432, guid: 31f40aac99241964e841efd04044ea7f, type: 3}
+  m_PrefabInstance: {fileID: 8703771162886865963}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &8703771162886865965 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 8703771164444320439, guid: 31f40aac99241964e841efd04044ea7f, type: 3}
+  m_PrefabInstance: {fileID: 8703771162886865963}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8703771162886865966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8703771162886865964}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74798a085cb776b49ba87e13f9510c0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gm: {fileID: 1629984193}
+  coll: {fileID: 8703771162886865965}

@@ -31,19 +31,15 @@ public class DrumOneInput : MonoBehaviour
 
         if (amountOfHits.Count > 0) {
             //print("D1 Hits: " + amountOfHits.Count);
-            float timer = 0.2f;
-            timer -= Time.deltaTime;
-            if (timer < 0) {
-                if (amountOfHits.Count == 1) {
-                    dis.EnterInput((DrumInput)0);
-                    print("D1Single");
-                } else if (amountOfHits.Count == 2) {
-                    dis.EnterInput((DrumInput)1);
-                    print("D1Double");
-                } else if (amountOfHits.Count >= 3) {
-                    print("D1Triple");
-                    dis.EnterInput((DrumInput)2);
-                }
+            if (amountOfHits.Count == 1) {
+                dis.EnterInput((DrumInput)0);
+                print("D1Single");
+            } else if (amountOfHits.Count == 2) {
+                dis.EnterInput((DrumInput)1);
+                print("D1Double");
+            } else if (amountOfHits.Count >= 3) {
+                print("D1Triple");
+                dis.EnterInput((DrumInput)2);
             }
             amountOfHits.Clear();
         }

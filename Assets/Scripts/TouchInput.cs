@@ -4,88 +4,42 @@ using UnityEngine;
 
 public class TouchInput : MonoBehaviour
 {
-    List<RaycastHit> drum1Hits;
-    List<RaycastHit> drum2Hits;
-    List<RaycastHit> drum3Hits;
-    DrumInputSystem dis; 
-    void Awake()
-    {
-        dis = FindObjectOfType<DrumInputSystem>();
+    DrumInputSystem dis;
+    public GameObject gm;
+    public Collider coll;
+    List<RaycastHit> amountOfHits = new List<RaycastHit>();
+
+    void Awake() {
+        dis = gm.GetComponent<DrumInputSystem>();
+        coll = GetComponent<Collider>();
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        //check the inputs and add hits to each drumhitcount
+    void Update() {
         for (int i = 0; i < Input.touchCount; i++) {
-            Ray ray = Camera.main.ScreenPointToRay(Input.touches[i].position);
-            RaycastHit hit;
-
-            if (Physics.Raycast(ray, out hit)) {
-                if (hit.collider != null) {
-                    var name = hit.collider.gameObject.name;
-                    if (name == "DrumOne") {
-                        drum1Hits.Add(hit);
-                    } else if (name == "DrumTwo") {
-                        drum2Hits.Add(hit);
-                    } else if (name == "DrumThree") {
-                        drum3Hits.Add(hit);
-                    }
+            if (Input.touches[i].phase == TouchPhase.Began) {
+                Ray ray = Camera.main.ScreenPointToRay(Input.touches[i].position);
+                RaycastHit hit;
+                if (coll.Raycast(ray, out hit, 100f)) {
+                    amountOfHits.Add(hit);
+                    //print("HitD1");
                 }
             }
         }
-        //if we have a hit check how many hits and play the correct sound
-        AmountOfHitsd1();
-        AmountOfHitsd2();
-        AmountOfHitsd3();
-    }
 
-    void AmountOfHitsd1() {
-        if (drum1Hits.Count > 0) {
-            float timer = 0.2f;
-            timer -= Time.deltaTime;
-            if (timer < 0) {
-                if (drum1Hits.Count == 1) {
-                    dis.EnterInput((DrumInput)0);
-                } else if (drum1Hits.Count == 2) {
-                    dis.EnterInput((DrumInput)1);
-                } else if (drum1Hits.Count >= 3) {
-                    dis.EnterInput((DrumInput)2);
-                }
-                drum1Hits.Clear();
+        if (amountOfHits.Count > 0) {
+            //print("D1 Hits: " + amountOfHits.Count);
+            if (amountOfHits.Count == 1) {
+                dis.EnterInput((DrumInput)0);
+                print("D1Single");
+            } else if (amountOfHits.Count == 2) {
+                dis.EnterInput((DrumInput)1);
+                print("D1Double");
+            } else if (amountOfHits.Count >= 3) {
+                print("D1Triple");
+                dis.EnterInput((DrumInput)2);
             }
-        } else print("No hit D1");
-    }
-    void AmountOfHitsd2() {
-        if (drum2Hits.Count > 0) {
-            float timer = 0.2f;
-            timer -= Time.deltaTime;
-            if (timer < 0) {
-                if (drum2Hits.Count == 1) {
-                    dis.EnterInput((DrumInput)3);
-                } else if (drum2Hits.Count == 2) {
-                    dis.EnterInput((DrumInput)4);
-                } else if (drum2Hits.Count >= 5) {
-                    dis.EnterInput((DrumInput)2);
-                }
-                drum2Hits.Clear();
-            }
-        } else print("No hit D2");
-    }
-    void AmountOfHitsd3() {
-        if (drum1Hits.Count > 0) {
-            float timer = 0.2f;
-            timer -= Time.deltaTime;
-            if (timer < 0) {
-                if (drum3Hits.Count == 1) {
-                    dis.EnterInput((DrumInput)6);
-                } else if (drum3Hits.Count == 2) {
-                    dis.EnterInput((DrumInput)7);
-                } else if (drum3Hits.Count >= 3) {
-                    dis.EnterInput((DrumInput)8);
-                }
-                drum3Hits.Clear();
-            }
-        } else print("No hit D3");
+            amountOfHits.Clear();
+        }
     }
 }

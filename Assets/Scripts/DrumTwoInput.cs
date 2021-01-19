@@ -28,17 +28,16 @@ public class DrumTwoInput : MonoBehaviour
         }
 
         if (amountOfHits.Count > 0) {
-            //print("D2 Hits: " + amountOfHits.Count);
-            float timer = 0.2f;
-            timer -= Time.deltaTime;
-            if (timer < 0) {
-                if (amountOfHits.Count == 1) {
-                    dis.EnterInput((DrumInput)3);
-                } else if (amountOfHits.Count == 2) {
-                    dis.EnterInput((DrumInput)4);
-                } else if (amountOfHits.Count >= 3) {
-                    dis.EnterInput((DrumInput)5);
-                }
+            //print("D1 Hits: " + amountOfHits.Count);
+            if (amountOfHits.Count == 1) {
+                dis.EnterInput((DrumInput)3);
+                print("D2Single");
+            } else if (amountOfHits.Count == 2) {
+                dis.EnterInput((DrumInput)4);
+                print("D2Double");
+            } else if (amountOfHits.Count >= 3) {
+                print("D2Triple");
+                dis.EnterInput((DrumInput)5);
             }
             amountOfHits.Clear();
         }

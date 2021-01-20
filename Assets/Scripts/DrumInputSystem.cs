@@ -9,15 +9,15 @@ public class DrumInputSystem : MonoBehaviour
 {
     public UnityEvent<DrumInput> anythingInput;
 
-    public UnityEvent D1Single;
-    public UnityEvent D1Double;
-    public UnityEvent D1Triple;
-    public UnityEvent D2Single;
-    public UnityEvent D2Double;
-    public UnityEvent D2Triple;
-    public UnityEvent D3Single;
-    public UnityEvent D3Double;
-    public UnityEvent D3Triple;
+    public UnityEvent<DrumInput> D1Single;
+    public UnityEvent<DrumInput> D1Double;
+    public UnityEvent<DrumInput> D1Triple;
+    public UnityEvent<DrumInput> D2Single;
+    public UnityEvent<DrumInput> D2Double;
+    public UnityEvent<DrumInput> D2Triple;
+    public UnityEvent<DrumInput> D3Single;
+    public UnityEvent<DrumInput> D3Double;
+    public UnityEvent<DrumInput> D3Triple;
 
     //public UnityEvent drum1Input;
     //public UnityEvent drum2Input;
@@ -30,31 +30,31 @@ public class DrumInputSystem : MonoBehaviour
     public void EnterInput(DrumInput d) {
         anythingInput.Invoke(d);
         if (d == DrumInput.D1Single) {
-            D1Single.Invoke();
+            D1Single.Invoke(d);
             print("D1Single");
         } else if (d == DrumInput.D2Single) {
-            D2Single.Invoke();
+            D2Single.Invoke(d);
             print("D2Single");
         } else if (d == DrumInput.D3Single) {
-            D3Single.Invoke();
+            D3Single.Invoke(d);
             print("D3Single");
         } else if (d == DrumInput.D1Double) {
-            D1Double.Invoke();
+            D1Double.Invoke(d);
             print("D1Double");
         } else if (d == DrumInput.D2Double) {
-            D2Double.Invoke();
+            D2Double.Invoke(d);
             print("D2Double");
         } else if (d == DrumInput.D3Double) {
-            D3Double.Invoke();
+            D3Double.Invoke(d);
             print("D3Double");
         } else if (d == DrumInput.D1Triple) {
-            D1Triple.Invoke();
+            D1Triple.Invoke(d);
             print("D1Triple");
         } else if (d == DrumInput.D2Triple) {
-            D2Triple.Invoke();
+            D2Triple.Invoke(d);
             print("D2Triple");
         } else if (d == DrumInput.D3Triple) {
-            D3Triple.Invoke();
+            D3Triple.Invoke(d);
             print("D3Triple");
         }
     }

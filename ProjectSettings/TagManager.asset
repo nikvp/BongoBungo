@@ -48,6 +48,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: indicator
+    uniqueID: 4095988429
+    locked: 0
   - name: Beats
     uniqueID: 3491819805
     locked: 0

@@ -23,7 +23,9 @@ public class NoteHolder : MonoBehaviour
             var spr = gameObject.GetComponent<SpriteRenderer>();
             spr.enabled = true;
         } else if (collision.tag == "Delete") {
+            print("Missed One");
             Destroy(gameObject);
+
         }
     }
 

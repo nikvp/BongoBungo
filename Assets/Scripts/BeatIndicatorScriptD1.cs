@@ -4,41 +4,76 @@ using UnityEngine;
 
 public class BeatIndicatorScriptD1 : MonoBehaviour
 {
-    // Start is called before the first frame update
     public bool canBePressed;
-    //GameObject dIndicator;
-    //IndicatorScript1 ids1;
-    public DrumInput neededDrum;
+    DrumInputSystem dis;
+    public bool singlePressed;
+    public bool doublePressed;
+    public bool triplePressed;
+    public bool needed1Pressed;
+    public bool needed2Pressed;
+    public bool needed3Pressed;
+    public bool correctlyPressed;
 
-    // Update is called once per frame
-    void Update()
-    {
-        //if (canBePressed == true) {
-        //    //if (ids1.beingPressed == true) {
-        //    //    CheckIfRightDrum();
-             
-        //}
-    }
-    private void OnTriggerEnter2D(Collider2D col) {
-        //if (col.tag == "Activator1") {
-        //    dIndicator = col.gameObject;
-        //    ids1 = dIndicator.GetComponent<IndicatorScript1>();
-        //    canBePressed = true;
-        //}
+    private void Awake() {
+        dis = FindObjectOfType<DrumInputSystem>();
+        dis.D1Single.AddListener(PressButton);
+        dis.D1Double.AddListener(PressButton);
+        dis.D1Triple.AddListener(PressButton);
     }
 
-    private void OnTriggerExit2D(Collider2D col) {
-        //if (col.tag == "Activator1") {
-        //    canBePressed = false;
-        //}
+    private void OnTriggerEnter2D(Collider2D collision) {
+        if (collision.tag == "Activator1") {
+            canBePressed = true;
+        }
     }
 
-    //void CheckIfRightDrum() {
-    //    if (ids1.pressedDrum == neededDrum) {
-    //        Destroy(gameObject);
-    //        //give points and do some effects
-    //    } else {
-    //        print("Wrong drum");
-    //    }
-    //}
+    private void OnTriggerExit2D(Collider2D collision) {
+        if (collision.tag == "Activator1") {
+            canBePressed = false;
+        }
+    }
+
+    void CorrectlyPressed() {
+        if (needed1Pressed == true && singlePressed == true) {
+            correctlyPressed = true;
+        } else if (needed2Pressed == true && doublePressed == true) {
+            correctlyPressed = true;
+        } else if (needed3Pressed == true && triplePressed == true) {
+            correctlyPressed = true;
+        } else correctlyPressed = false;
+    }
+
+
+
+    void PressButton(DrumInput d) {
+        if (d == DrumInput.D1Single) {
+            for (float i = 0; i < 0.5f; i += Time.deltaTime) {
+                singlePressed = true;
+                CorrectlyPressed();
+                if (canBePressed == true && correctlyPressed == true) {
+                    Destroy(gameObject);
+                }
+            }
+            singlePressed = false;
+
+        } else if (d == DrumInput.D1Double) {
+            for (float i = 0; i < 0.5f; i += Time.deltaTime) {
+                doublePressed = true;
+                CorrectlyPressed();
+                if (canBePressed == true && correctlyPressed == true) {
+                    Destroy(gameObject);
+                }
+            }
+            doublePressed = false;
+        } else if (d == DrumInput.D1Triple) {
+            for (float i = 0; i < 0.5f; i += Time.deltaTime) {
+                triplePressed = true;
+                CorrectlyPressed();
+                if (canBePressed == true && correctlyPressed == true) {
+                    Destroy(gameObject);
+                }
+            }
+            triplePressed = false;
+        }
+    }
 }

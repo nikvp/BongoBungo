@@ -7,6 +7,8 @@ public class Testindicator1 : MonoBehaviour {
     public bool singlePressed;
     public bool doublePressed;
     public bool triplePressed;
+    public bool needed1Pressed;
+    
     DrumInputSystem dis;
 
     void Awake() {

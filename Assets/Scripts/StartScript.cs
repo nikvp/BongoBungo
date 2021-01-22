@@ -5,6 +5,7 @@ using UnityEngine;
 public class StartScript : MonoBehaviour
 {
     List<GameObject> beats = new List<GameObject>();
+    public string[] audioID;
 
     public Collider coll;
     void Awake()
@@ -20,6 +21,9 @@ public class StartScript : MonoBehaviour
     {
         for (int i = 0; i < Input.touchCount; i++) {
             if (Input.touches[0].phase == TouchPhase.Began) {
+                for (int x = 0; x < audioID.Length; x++) {
+                    AudioFW.PlayLoop(audioID[x]);
+                }
                 Ray ray = Camera.main.ScreenPointToRay(Input.touches[0].position);
                 RaycastHit hit;
                 if (coll.Raycast(ray, out hit, 100f)) {

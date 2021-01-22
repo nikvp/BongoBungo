@@ -228,7 +228,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -198978867
-  m_SortingLayer: 2
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: 4adeaf2d2b1c7417e89f026626d8264f, type: 3}
   m_Color: {r: 0.6839622, g: 1, b: 0.8862802, a: 1}
@@ -1931,6 +1931,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cdaca3d88bcf2e4d9d1896b7a10cb9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioID:
+  - RythmAndMelody
   coll: {fileID: 1010480401}
 --- !u!65 &1010480401
 BoxCollider:
@@ -2326,31 +2328,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7428696541866608576, guid: a838ef21afa32ab44826ac06e9718e38, type: 3}
   m_PrefabInstance: {fileID: 1353036716}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1353036718 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7428696541866608636, guid: a838ef21afa32ab44826ac06e9718e38, type: 3}
-  m_PrefabInstance: {fileID: 1353036716}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1353036719
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1353036718}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f1b6dd33a9eee04080ed674112f317f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  canBePressed: 0
-  singlePressed: 0
-  doublePressed: 0
-  triplePressed: 0
-  needed1Pressed: 0
-  needed2Pressed: 0
-  needed3Pressed: 0
-  correctlyPressed: 0
 --- !u!1 &1418539451
 GameObject:
   m_ObjectHideFlags: 0
@@ -2911,31 +2888,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7428696541866608576, guid: a838ef21afa32ab44826ac06e9718e38, type: 3}
   m_PrefabInstance: {fileID: 1725748251}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1725748253 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7428696541866608636, guid: a838ef21afa32ab44826ac06e9718e38, type: 3}
-  m_PrefabInstance: {fileID: 1725748251}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1725748254
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1725748253}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f1b6dd33a9eee04080ed674112f317f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  canBePressed: 0
-  singlePressed: 0
-  doublePressed: 0
-  triplePressed: 0
-  needed1Pressed: 0
-  needed2Pressed: 0
-  needed3Pressed: 0
-  correctlyPressed: 0
 --- !u!1 &1788653184
 GameObject:
   m_ObjectHideFlags: 0
@@ -3332,7 +3284,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -198978867
-  m_SortingLayer: 2
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: 4adeaf2d2b1c7417e89f026626d8264f, type: 3}
   m_Color: {r: 0.6839622, g: 1, b: 0.8862802, a: 1}
@@ -3562,7 +3514,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -198978867
-  m_SortingLayer: 2
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: 4adeaf2d2b1c7417e89f026626d8264f, type: 3}
   m_Color: {r: 0.6839622, g: 1, b: 0.8862802, a: 1}
@@ -3757,31 +3709,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7428696541866608576, guid: a838ef21afa32ab44826ac06e9718e38, type: 3}
   m_PrefabInstance: {fileID: 2081147555}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &2081147557 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7428696541866608636, guid: a838ef21afa32ab44826ac06e9718e38, type: 3}
-  m_PrefabInstance: {fileID: 2081147555}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2081147558
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2081147557}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f1b6dd33a9eee04080ed674112f317f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  canBePressed: 0
-  singlePressed: 0
-  doublePressed: 0
-  triplePressed: 0
-  needed1Pressed: 0
-  needed2Pressed: 0
-  needed3Pressed: 0
-  correctlyPressed: 0
 --- !u!1 &2109635853
 GameObject:
   m_ObjectHideFlags: 0
@@ -4070,6 +3997,42 @@ PrefabInstance:
     - target: {fileID: 5667717502262224584, guid: a70a2e4afb33b404b910497f26bb705b, type: 3}
       propertyPath: m_Name
       value: GameManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 5667717502262224585, guid: a70a2e4afb33b404b910497f26bb705b, type: 3}
+      propertyPath: audioID.Array.size
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 5667717502262224585, guid: a70a2e4afb33b404b910497f26bb705b, type: 3}
+      propertyPath: audioID.Array.data[0]
+      value: Conga1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5667717502262224585, guid: a70a2e4afb33b404b910497f26bb705b, type: 3}
+      propertyPath: audioID.Array.data[1]
+      value: Conga2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5667717502262224585, guid: a70a2e4afb33b404b910497f26bb705b, type: 3}
+      propertyPath: audioID.Array.data[3]
+      value: BB1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5667717502262224585, guid: a70a2e4afb33b404b910497f26bb705b, type: 3}
+      propertyPath: audioID.Array.data[4]
+      value: BB2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5667717502262224585, guid: a70a2e4afb33b404b910497f26bb705b, type: 3}
+      propertyPath: audioID.Array.data[5]
+      value: BB3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5667717502262224585, guid: a70a2e4afb33b404b910497f26bb705b, type: 3}
+      propertyPath: audioID.Array.data[6]
+      value: BBsteel1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5667717502262224585, guid: a70a2e4afb33b404b910497f26bb705b, type: 3}
+      propertyPath: audioID.Array.data[7]
+      value: BBsteel2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5667717502262224585, guid: a70a2e4afb33b404b910497f26bb705b, type: 3}
+      propertyPath: audioID.Array.data[8]
+      value: BBsteel3
       objectReference: {fileID: 0}
     - target: {fileID: 5667717502262224596, guid: a70a2e4afb33b404b910497f26bb705b, type: 3}
       propertyPath: m_RootOrder

@@ -22,7 +22,7 @@ public class DrumTwoInput : MonoBehaviour
                 RaycastHit hit;
                 if (coll.Raycast(ray, out hit, 100f)) {
                     amountOfHits.Add(hit);
-                    //print("HitD3");
+                    print("HitD3");
                 }
             }
 
@@ -39,7 +39,6 @@ public class DrumTwoInput : MonoBehaviour
                 dis.EnterInput((DrumInput)8);
             }
             amountOfHits.Clear();
-            //print("D1 Hits: " + amountOfHits.Count);
         }
     }
 }

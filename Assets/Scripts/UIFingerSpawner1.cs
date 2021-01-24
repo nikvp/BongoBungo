@@ -32,15 +32,7 @@ public class UIFingerSpawner1 : MonoBehaviour
             }
         }
 
-        foreach(var beat in beats) {
-            var script = beat.GetComponent<NoteHolder>();
-            if (script.hasIndicator == false) {
-                Instantiate(indicator, beat.transform.position, Quaternion.identity);
-                indicator.GetComponent<UiFingers>().host = beat;
-                script.hasIndicator = true;
-                continue;
-            } else continue;
-        }
+
 
         
     }

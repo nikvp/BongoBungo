@@ -115,6 +115,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   beatTempo: 2
   hasStarted: 1
+  hasIndicator: 0
 --- !u!114 &6874918067221724287
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -135,3 +136,5 @@ MonoBehaviour:
   needed2Pressed: 1
   needed3Pressed: 0
   correctlyPressed: 0
+  beat: 1
+  destroyed: 0

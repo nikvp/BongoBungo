@@ -34,7 +34,6 @@ public class NoteHolder : MonoBehaviour
             script.health--;
             score.score -= 100;
             Destroy(gameObject);
-
         }
     }
 

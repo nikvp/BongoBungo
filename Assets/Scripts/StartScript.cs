@@ -29,7 +29,6 @@ public class StartScript : MonoBehaviour
         scoreText = score.gameObject;
         healthText = health.gameObject;
 
-
     }
 
     private void Start() {

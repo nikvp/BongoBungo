@@ -33,28 +33,37 @@ public class StartScript : MonoBehaviour
                     Ray ray = Camera.main.ScreenPointToRay(Input.touches[0].position);
                     RaycastHit hit;
                     if (coll.Raycast(ray, out hit, 100f)) {
-                        spsc1.startSpawn = true;
+                        spawner1.SetActive(true);
+                        spawner2.SetActive(true);
+                        spawner3.SetActive(true);
+                        spsc1.startTime = Time.time;
+                        spsc2.startTime = Time.time;
+                        spsc3.startTime = Time.time;
                     }
                     startedBeatmap = true;
                 }
             }
         } else if (startedBeatmap == true) {
-            if (Input.touches[0].phase == TouchPhase.Began) {
-                for (int x = 0; x < audioID.Length; x++) {
-                    AudioFW.PlayLoop(audioID[x]);
-                }
-                Ray ray = Camera.main.ScreenPointToRay(Input.touches[0].position);
-                RaycastHit hit;
-                if (coll.Raycast(ray, out hit, 100f)) {
-                    spsc1.startSpawn = false;
-                    var tag = GameObject.FindGameObjectsWithTag("Beat");
-                    for (int y = 0; y < tag.Length; y++) {
-                        beats.Add(tag[y].gameObject);
+            for (int i = 0; i < Input.touchCount; i++) {
+                if (Input.touches[0].phase == TouchPhase.Began) {
+                    for (int x = 0; x < audioID.Length; x++) {
+                        AudioFW.StopLoop(audioID[x]);
                     }
-                    for (int i = 0; i < beats.Count; i++) {
-                        Destroy(beats[i]);
+                    Ray ray = Camera.main.ScreenPointToRay(Input.touches[0].position);
+                    RaycastHit hit;
+                    if (coll.Raycast(ray, out hit, 100f)) {
+                        spawner1.SetActive(false);
+                        spawner2.SetActive(false);
+                        spawner3.SetActive(false);
+                        var tag = GameObject.FindGameObjectsWithTag("Beat");
+                        for (int y = 0; y < tag.Length; y++) {
+                            beats.Add(tag[y].gameObject);
+                        }
+                        for (int z = 0; z < beats.Count; z++) {
+                            Destroy(beats[z]);
+                        }
+                        startedBeatmap = false;
                     }
-                    startedBeatmap = false;
                 }
             }
         }

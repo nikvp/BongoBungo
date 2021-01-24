@@ -4,17 +4,17 @@ using UnityEngine;
 
 public class DrumFeedbackAnimation : MonoBehaviour
 {
-    float timer = 0;
-    Transform drumPos;
-     void Start() {
-        //Drum's original position
-        drumPos = gameObject.transform;
-
+    public void CongaTap() {
+        Animation animator = gameObject.GetComponent<Animation>();
+        animator.Play();
     }
-    public void DrumTap(){
-        while(timer < 5f) {
-            drumPos.Translate(0, -0.5f * Time.deltaTime, 0, Space.Self);
-        }
+    public void DjembeTap() {
+        Animation animator = gameObject.GetComponent<Animation>();
+        animator.Play();
+    }
+    public void SteelTap() {
+        Animation animator = gameObject.GetComponent<Animation>();
+        animator.Play();
     }
 
 }

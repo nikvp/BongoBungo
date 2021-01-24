@@ -11,6 +11,7 @@ TagManager:
   - DrumLine
   - Delete
   - Beat
+  - Spawner
   layers:
   - Default
   - TransparentFX

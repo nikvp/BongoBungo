@@ -72,7 +72,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -803147491
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: 4adeaf2d2b1c7417e89f026626d8264f, type: 3}
   m_Color: {r: 0.12878752, g: 1, b: 0, a: 1}
@@ -131,7 +131,7 @@ MonoBehaviour:
   singlePressed: 0
   doublePressed: 0
   triplePressed: 0
-  needed1Pressed: 0
+  needed1Pressed: 1
   needed2Pressed: 0
   needed3Pressed: 0
   correctlyPressed: 0

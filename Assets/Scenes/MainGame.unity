@@ -1345,7 +1345,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &483923950
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1360,7 +1360,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startSpawn: 0
   beat: {fileID: 7428696541866608636, guid: a838ef21afa32ab44826ac06e9718e38, type: 3}
-  ellapsedTime: 0
+  startTime: 0
+  songTime: 0
   timeStamps: []
 --- !u!4 &483923951
 Transform:
@@ -1424,7 +1425,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &532344973
 Transform:
   m_ObjectHideFlags: 0
@@ -1901,7 +1902,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &884862441
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1914,6 +1915,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 148cfa085b6ad76458f1060fb7b283e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startSpawn: 0
+  beat: {fileID: 1279203531570092721, guid: bd7a8fdb9d38e2e4db036914926345e5, type: 3}
+  startTime: 0
+  songTime: 0
+  timeStamps: []
 --- !u!4 &884862442
 Transform:
   m_ObjectHideFlags: 0
@@ -3018,7 +3024,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1659695884
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3031,6 +3037,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb0f4feac3f692d48b07f301506e61ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startSpawn: 0
+  beat: {fileID: 3195258451831965978, guid: a9001e57931b0af4b82a5caedcbe0036, type: 3}
+  startTime: 0
+  songTime: 0
+  timeStamps: []
 --- !u!4 &1659695885
 Transform:
   m_ObjectHideFlags: 0

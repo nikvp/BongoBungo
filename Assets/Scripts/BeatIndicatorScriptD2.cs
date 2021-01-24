@@ -13,17 +13,32 @@ public class BeatIndicatorScriptD2 : MonoBehaviour
     public bool needed2Pressed;
     public bool needed3Pressed;
     public bool correctlyPressed;
-
+    ScoreScript script;
+    public int beat = 2;
+    public bool destroyed;
+    GameObject fingerDisplayer;
+    ShowFingers fingerScript;
     private void Awake() {
         dis = FindObjectOfType<DrumInputSystem>();
         dis.D2Single.AddListener(PressButton);
         dis.D2Double.AddListener(PressButton);
         dis.D2Triple.AddListener(PressButton);
+        script = FindObjectOfType<ScoreScript>();
+        fingerDisplayer = GameObject.FindGameObjectWithTag("Fingers2");
+        fingerScript = fingerDisplayer.GetComponent<ShowFingers>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.tag == "Activator2") {
             canBePressed = true;
+        } else if (collision.tag == "DrumLine") {
+            if (needed1Pressed == true) {
+                fingerScript.fingerDisplay.Add(1);
+            } else if (needed2Pressed == true) {
+                fingerScript.fingerDisplay.Add(2);
+            } else if (needed3Pressed == true) {
+                fingerScript.fingerDisplay.Add(3);
+            }
         }
     }
 
@@ -31,6 +46,10 @@ public class BeatIndicatorScriptD2 : MonoBehaviour
         if (collision.tag == "Activator2") {
             canBePressed = false;
         }
+    }
+
+    private void OnDisable() {
+        script.score += 100;
     }
 
     void CorrectlyPressed() {
@@ -51,6 +70,7 @@ public class BeatIndicatorScriptD2 : MonoBehaviour
                 singlePressed = true;
                 CorrectlyPressed();
                 if (canBePressed == true && correctlyPressed == true) {
+                    destroyed = true;
                     Destroy(gameObject);
                 }
             }
@@ -61,6 +81,7 @@ public class BeatIndicatorScriptD2 : MonoBehaviour
                 doublePressed = true;
                 CorrectlyPressed();
                 if (canBePressed == true && correctlyPressed == true) {
+                    destroyed = true;
                     Destroy(gameObject);
                 }
             }
@@ -70,6 +91,7 @@ public class BeatIndicatorScriptD2 : MonoBehaviour
                 triplePressed = true;
                 CorrectlyPressed();
                 if (canBePressed == true && correctlyPressed == true) {
+                    destroyed = true;
                     Destroy(gameObject);
                 }
             }

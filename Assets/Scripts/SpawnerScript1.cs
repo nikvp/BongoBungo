@@ -11,7 +11,6 @@ public class SpawnerScript1 : MonoBehaviour
     public float songTime;
     public List<float> timeStamps = new List<float>();
     
-
     void OnEnable()
     {
         timeStamps.Add(12);

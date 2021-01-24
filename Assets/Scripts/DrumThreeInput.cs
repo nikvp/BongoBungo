@@ -25,10 +25,9 @@ public class DrumThreeInput : MonoBehaviour
                     //print("HitD3");
                 }
             }
-        }
 
+        }
         if (amountOfHits.Count > 0) {
-            //print("D1 Hits: " + amountOfHits.Count);
             if (amountOfHits.Count == 1) {
                 dis.EnterInput((DrumInput)6);
                 print("D3Single");
@@ -40,6 +39,7 @@ public class DrumThreeInput : MonoBehaviour
                 dis.EnterInput((DrumInput)8);
             }
             amountOfHits.Clear();
+            //print("D1 Hits: " + amountOfHits.Count);
         }
-    }
+    }   
 }

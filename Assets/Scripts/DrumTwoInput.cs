@@ -22,24 +22,24 @@ public class DrumTwoInput : MonoBehaviour
                 RaycastHit hit;
                 if (coll.Raycast(ray, out hit, 100f)) {
                     amountOfHits.Add(hit);
-                    //print("HitD2");
+                    //print("HitD3");
                 }
             }
-        }
 
+        }
         if (amountOfHits.Count > 0) {
-            //print("D1 Hits: " + amountOfHits.Count);
             if (amountOfHits.Count == 1) {
-                dis.EnterInput((DrumInput)3);
-                print("D2Single");
+                dis.EnterInput((DrumInput)6);
+                print("D3Single");
             } else if (amountOfHits.Count == 2) {
-                dis.EnterInput((DrumInput)4);
-                print("D2Double");
+                dis.EnterInput((DrumInput)7);
+                print("D3Double");
             } else if (amountOfHits.Count >= 3) {
-                print("D2Triple");
-                dis.EnterInput((DrumInput)5);
+                print("D3Triple");
+                dis.EnterInput((DrumInput)8);
             }
             amountOfHits.Clear();
+            //print("D1 Hits: " + amountOfHits.Count);
         }
     }
 }

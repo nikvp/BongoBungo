@@ -6,6 +6,14 @@ public class NoteHolder : MonoBehaviour
 {
     public float beatTempo;
     public bool hasStarted;
+    HealthScript script;
+    ScoreScript score;
+    public bool hasIndicator;
+
+    private void Awake() {
+        script = FindObjectOfType<HealthScript>();
+        score = FindObjectOfType<ScoreScript>();
+    }
     void Update()
     {
         if (!hasStarted) {
@@ -23,7 +31,8 @@ public class NoteHolder : MonoBehaviour
             var spr = gameObject.GetComponent<SpriteRenderer>();
             spr.enabled = true;
         } else if (collision.tag == "Delete") {
-            print("Missed One");
+            script.health--;
+            score.score -= 100;
             Destroy(gameObject);
 
         }

@@ -10,8 +10,12 @@ TagManager:
   - Activator3
   - DrumLine
   - Delete
-  - Beat
   - Spawner
+  - Beat
+  - Indicator
+  - Fingers1
+  - Fingers2
+  - Fingers3
   layers:
   - Default
   - TransparentFX

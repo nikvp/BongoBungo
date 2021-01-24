@@ -31,14 +31,14 @@ public class DrumOneInput : MonoBehaviour
         }
         if (amountOfHits.Count > 0) {
             if (amountOfHits.Count == 1) {
-                dis.EnterInput((DrumInput)6);
+                dis.EnterInput((DrumInput)0);
                 print("D3Single");
             } else if (amountOfHits.Count == 2) {
-                dis.EnterInput((DrumInput)7);
+                dis.EnterInput((DrumInput)1);
                 print("D3Double");
             } else if (amountOfHits.Count >= 3) {
                 print("D3Triple");
-                dis.EnterInput((DrumInput)8);
+                dis.EnterInput((DrumInput)2);
             }
             amountOfHits.Clear();
         }
